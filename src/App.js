@@ -4,8 +4,12 @@ import './style.css';
 export default function App() {
   const [huf, setHuf] = useState('');
 
+  const write = event => {
+    setHuf(event.target.value);
+  };
+
   return (
-    <div>
+    <div className="box">
       <div className="inputBox">
         <div className="row">
           <div className="column-sm">
@@ -14,9 +18,11 @@ export default function App() {
         </div>
         <div className="row">
           <label name="forint">Forint (HUF)</label>
-
-          <input type="text" name="forint" value={huf} onChange={setHuf} />
+          <input type="number" name="forint" value={huf} onChange={write} />
         </div>
+      </div>
+      <div className="outputBox">
+        <h2 className
       </div>
     </div>
   );
