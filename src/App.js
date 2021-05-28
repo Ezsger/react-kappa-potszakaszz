@@ -37,10 +37,10 @@ export default function App() {
         <div className="row">
           <h6>Árfolyam:</h6>
         </div>
-        <div className="row">
+        <div className="devEur row">
           <h8>1 EUR = 320 HUF</h8>
         </div>
-        <div className="row">
+        <div className="devUsd row">
           <h8>1 USD = 250 HUF</h8>
         </div>
       </div>
