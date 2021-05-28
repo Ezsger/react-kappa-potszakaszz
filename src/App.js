@@ -22,22 +22,27 @@ export default function App() {
         </div>
       </div>
       <div className="outputBox">
-        <h2 className="euro">{`${huf} HUF = ${huf !== "" ? parseInt(huf)/320} EUR`}</h2>
-        <h2 className="dollar"></h2>
+        <h3 className="euro">
+          {`${huf} HUF = `}
+          {huf !== ''
+            ? `${(parseInt(huf) / 320).toFixed(2)} EUR`
+            : '0.00 EUR'}{' '}
+        </h3>
+        <h3 className="dollar">
+          {`${huf} HUF = `}
+          {huf !== '' ? `${(parseInt(huf) / 250).toFixed(2)} EUR` : '0.00 USD'}
+        </h3>
       </div>
       <div className="infoBox">
-        <div className = "row">
+        <div className="row">
           <h6>Árfolyam:</h6>
         </div>
-        <div className = "row">
-           <h8>1 EUR = 320 HUF</h8>
+        <div className="row">
+          <h8>1 EUR = 320 HUF</h8>
         </div>
-        <div className = "row">
-           <h8>1 USD = 250 HUF</h8>
+        <div className="row">
+          <h8>1 USD = 250 HUF</h8>
         </div>
-        
-       
-       
       </div>
     </div>
   );
